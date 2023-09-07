@@ -1,4 +1,4 @@
-package com.util;
+package com.foly.bo.util;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

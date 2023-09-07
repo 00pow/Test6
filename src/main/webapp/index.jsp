@@ -18,8 +18,8 @@
 		//response.sendRedirect("./busan.me");
 		// response.sendRedirect("./MemberJoin.me");
 		//response.sendRedirect("./MemberLogin.me"); 
-		// response.sendRedirect("./Main.me");
-		response.sendRedirect("./Service.re");
+		response.sendRedirect("./bo_res.re");
+		//response.sendRedirect("./Service.re");
 		
 	
 	%>

@@ -1,19 +1,10 @@
-package com.foly.db;
+package com.foly.bo.db;
 
 import java.sql.Date;
 import java.sql.Timestamp;
 
-/**
- * 
- * 	MemberDTO : DB에 저장되는 테이블의 데이터를 저장하는 클래스 [박스]
- *	(Data Transfer Object)
- *
- *	MemberBean(자바빈) -> memberDTO
- *
- */
 
-
-public class DTO {
+public class boDTO {
 	
 	private int user_num;
 	private int bo_value;
@@ -22,9 +13,11 @@ public class DTO {
 	private int bo_per;
 	private int pk_num;
 	private int bo_state;
+	private String bo_menu;
 	private int bo_count;
 	private int bo_price;
 	private int pay_num;
+	private int own_num;
 	public int getUser_num() {
 		return user_num;
 	}
@@ -67,6 +60,12 @@ public class DTO {
 	public void setBo_state(int bo_state) {
 		this.bo_state = bo_state;
 	}
+	public String getBo_menu() {
+		return bo_menu;
+	}
+	public void setBo_menu(String bo_menu) {
+		this.bo_menu = bo_menu;
+	}
 	public int getBo_count() {
 		return bo_count;
 	}
@@ -85,23 +84,19 @@ public class DTO {
 	public void setPay_num(int pay_num) {
 		this.pay_num = pay_num;
 	}
-	
+	public int getOwn_num() {
+		return own_num;
+	}
+	public void setOwn_num(int own_num) {
+		this.own_num = own_num;
+	}
 	@Override
 	public String toString() {
-		return "DTO [user_num=" + user_num + ", bo_value=" + bo_value + ", bo_num=" + bo_num + ", bo_date=" + bo_date
-				+ ", bo_per=" + bo_per + ", pk_num=" + pk_num + ", bo_state=" + bo_state + ", bo_count=" + bo_count
-				+ ", bo_price=" + bo_price + ", pay_num=" + pay_num + "]";
+		return "boDTO [user_num=" + user_num + ", bo_value=" + bo_value + ", bo_num=" + bo_num + ", bo_date=" + bo_date
+				+ ", bo_per=" + bo_per + ", pk_num=" + pk_num + ", bo_state=" + bo_state + ", bo_menu=" + bo_menu
+				+ ", bo_count=" + bo_count + ", bo_price=" + bo_price + ", pay_num=" + pay_num + ", own_num=" + own_num
+				+ "]";
 	}
-	
-	
-	
-	
-	// alt shift s + r
-	
-	
-	
-	
-	
 	
 	
 	

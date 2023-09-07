@@ -1,4 +1,4 @@
-package com.util;
+package com.foly.bo.util;
 
 /**
  *  ActionForward :페이지 이동에 필요한 정보를 저장하는 객체

@@ -13,7 +13,7 @@
   <!-- 컨트롤러(서블릿) 매핑 -->
   <servlet>
   	<servlet-name>FrontController</servlet-name>
-  	<servlet-class>com.itwillbs.foly.FrontController</servlet-class>
+  	<servlet-class>com.foly.bo.foly.FrontController</servlet-class>
   </servlet>
   
   <servlet-mapping>

@@ -1,4 +1,4 @@
-package com.foly;
+package com.foly.bo.foly;
 
 import java.io.IOException;
 
@@ -8,8 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.util.Action;
-import com.util.ActionForward;
+import com.foly.bo.util.Action;
+import com.foly.bo.util.ActionForward;
+import com.itwillbs.member.action.MemberLogoutAction;
 
 /**
  *  컨트롤러의 동작수행 : model(java)-view(jsp) 연결
@@ -47,13 +48,13 @@ public class FrontController extends HttpServlet{
 		System.out.println("\n C : 2. 가상주소 매핑 - 시작");
 		Action action = null;
 		ActionForward forward = null;
-		// 회원가입 - 패턴1 => DB안쓰고 화면이동
+		// - 패턴1 => DB안쓰고 화면이동
 		if(command.equals("/Service.re")) {
 			System.out.println(" C : /Service.re 매핑");
 			System.out.println(" C : 패턴1 - DB사용X, 화면 이동 ");
 			
 			forward = new ActionForward();
-			forward.setPath("./service/Service.jsp");
+			forward.setPath("./bo_service/Service.jsp");
 			forward.setRedirect(false);			// MVC 이동방식
 		}	
 		else if(command.equals("/cartService.re")) {
@@ -62,7 +63,7 @@ public class FrontController extends HttpServlet{
 			System.out.println(" C : 패턴1 - 디비사용X, 화면이동 ");
 			
 			forward = new ActionForward();
-			forward.setPath("./service/cartService.jsp");   
+			forward.setPath("./bo_service/cartService.jsp");   
 			forward.setRedirect(false); 
 			
 		}
@@ -72,7 +73,7 @@ public class FrontController extends HttpServlet{
 			System.out.println(" C : 패턴1 - 디비사용X, 화면이동 ");
 			
 			forward = new ActionForward();
-			forward.setPath("./service/goReservation.jsp");   
+			forward.setPath("./bo_service/goReservation.jsp");   
 			forward.setRedirect(false); 
 			
 		}
@@ -82,7 +83,7 @@ public class FrontController extends HttpServlet{
 			System.out.println(" C : 패턴1 - 디비사용X, 화면이동 ");
 			
 			forward = new ActionForward();
-			forward.setPath("./service/goRestaurant.jsp");   
+			forward.setPath("./bo_service/goRestaurant.jsp");   
 			forward.setRedirect(false); 
 			
 		}
@@ -94,7 +95,7 @@ public class FrontController extends HttpServlet{
 			System.out.println(" C : 패턴1 - 디비사용X, 화면이동 ");
 			
 			forward = new ActionForward();
-			forward.setPath("./service/pickUp.jsp");   
+			forward.setPath("./bo_service/pickUp.jsp");   
 			forward.setRedirect(false); 
 			
 		}
@@ -105,8 +106,18 @@ public class FrontController extends HttpServlet{
 			System.out.println(" C : 패턴1 - 디비사용X, 화면이동 ");
 			
 			forward = new ActionForward();
-			forward.setPath("./service/goPay.jsp");   
+			forward.setPath("./bo_service/goPay.jsp");   
 			forward.setRedirect(false); 
+			
+		}else if(command.equals("/bo_res.re")){
+			action = new bo_resAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			
 			
 		}
 		
