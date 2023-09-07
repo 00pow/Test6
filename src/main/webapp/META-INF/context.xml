@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 태그로 작성된 파일 (정보를 저장) -->
+<!-- 디비 연결에 필요한 정보를 저장 -->
+
+<Context>
+	<Resource 
+		name = "jdbc/Foly"
+		auth = "Container"
+		type = "javax.sql.DataSource"
+		driverClassName="com.mysql.cj.jdbc.Driver"
+		username = "c6d2305t1"
+		password= "1234"
+		url = "jdbc:mysql://itwillbs.com:3306/c6d2305t1"
+		maxWait = "5000"
+	/>
+</Context>
+
