@@ -56,13 +56,13 @@ public class boDAO {
 	
 	//식당정보 가져오는 메서드 - getRestList()
 	
-	public boDTO getMemberInfo(String id) {
+	public boDTO getRestList(String id) {
 		boDTO dto = null;
 		try {
 			// 1.2. 디비연결
 			con = getCon();
 			// 3. sql 작성(select) & pstmt 객체
-			sql = "select * from itwill_member where own_num=?";
+			sql = "select * from restaurant where own_num=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
 			// 4. sql 실행
