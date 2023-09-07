@@ -13,6 +13,8 @@ public class BasketAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println(" C : BoardWriteAction_execute() 실행 "); //컨트롤러에서 얘들을 불러줘야함 다시컨트롤러로
+		///  오늘작업
+		
 		
 		// 한글 처리(생략)->web.xml 한글처리 필터
 		// (BoardDAO,DTO복붙해오기)
